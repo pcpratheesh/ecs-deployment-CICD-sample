@@ -50,6 +50,9 @@ func main() {
 	v1.GET("/hi", func(ctx *gin.Context) {
 		ctx.JSON(http.StatusOK, "Hello")
 	})
+	v1.GET("/ping", func(ctx *gin.Context) {
+		ctx.JSON(http.StatusOK, "Pong")
+	})
 
 	srv := &http.Server{
 		Addr:    fmt.Sprintf(":%d", cfg.Port),
