@@ -38,7 +38,6 @@ func main() {
 	r.GET("/ping", func(ctx *gin.Context) {
 		ctx.String(http.StatusOK, "pong")
 	})
-
 	var routeString string
 	if cfg.Env == config.Production || cfg.Env == config.Local {
 		routeString = "v1"
@@ -49,6 +48,9 @@ func main() {
 	v1 := r.Group(routeString)
 	v1.GET("/hi", func(ctx *gin.Context) {
 		ctx.JSON(http.StatusOK, "Hello")
+	})
+	v1.GET("/ping", func(ctx *gin.Context) {
+		ctx.JSON(http.StatusOK, "Pong")
 	})
 
 	srv := &http.Server{
