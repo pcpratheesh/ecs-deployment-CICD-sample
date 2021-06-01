@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/pratheeshpcplpta/ecs-task-definition-ci-cd/config"
+	"github.com/pcpratheesh/ecs-task-definition-ci-cd/config"
 	"go.uber.org/zap"
 )
 
