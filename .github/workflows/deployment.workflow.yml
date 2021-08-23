@@ -29,14 +29,6 @@ on:
   push:
     branches: 
       - staging
-      - ios-dev
-      - pre-production
-      - production
-  pull_request:
-    types: [closed]
-    branches: 
-      - staging
-      - ios-dev
       - pre-production
       - production
 
@@ -86,9 +78,6 @@ jobs:
             ;;
           test-branch)
             echo "ENVTAG=dev" >> $GITHUB_ENV
-            ;;
-          ios-dev)
-            echo "ENVTAG=iosdev" >> $GITHUB_ENV
             ;;
           pre-production)
             echo "ENVTAG=preprod" >> $GITHUB_ENV
